@@ -14,4 +14,6 @@ docker login # login to DockerHub to be able to push your image
 docker push <your-registry>/my-simple-website:v1 # pushes the image to the registry
 
 docker run -p 80:80 <your-registry>/my-simple-website:v1 # starts a new container from the image we just pushed to Docker. The -p option maps a host port to a container port. In this command, the host port 80 is being mapped to the container port 80, meaning that incoming traffic on the host's port 80 will be forwarded to the container's port 80. This allows us to access the container's application that is listening on port 80 from the host by accessing http://localhost:80 in the web browser
+
+curl localhost # will output html file contents
 ```
